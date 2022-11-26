@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_dodgeInsetEdges="bottom">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:cardBackgroundColor="#DDD"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="false"
+        app:layout_dodgeInsetEdges="bottom">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="1dp"
+            android:background="#FFFFFF"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tvSign"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/sting"
+                android:textColor="#00c853"
+                android:textSize="24sp"
+                tools:ignore="TouchTargetSizeCheck"
+                android:focusable="true" />
+
+            <EditText
+                android:id="@+id/etAmount"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="3"
+                android:background="@drawable/etbg"
+                android:ems="10"
+                android:hint="@string/amount"
+                android:inputType="number"
+                android:maxLength="7"
+                android:padding="5dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                android:autofillHints="" />
+
+            <EditText
+                android:id="@+id/etMessage"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="2dp"
+                android:layout_marginEnd="2dp"
+                android:layout_weight="7"
+                android:background="@drawable/etbg"
+                android:ems="10"
+                android:hint="@string/message"
+                android:inputType="textPersonName"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:padding="5dp"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                android:autofillHints="" />
+
+            <ImageView
+                android:id="@+id/ivSend"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clickable="true"
+                app:srcCompat="@drawable/ic_send"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
+                android:contentDescription="@string/todo"
+                android:focusable="true" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="@string/no_transactions_found"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
