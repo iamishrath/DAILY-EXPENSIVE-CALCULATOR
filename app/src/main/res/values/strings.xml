@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DAILY EXPENSIVE CALCULATOR</string>
+    <string name="sting">+₹</string>
+    <string name="amount">Amount</string>
+    <string name="message">Message</string>
+    <string name="todo">TODO</string>
+    <string name="no_transactions_found">No transactions found!</string>
+</resources>
